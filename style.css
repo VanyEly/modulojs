@@ -1,0 +1,70 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+   
+
+}
+
+
+body{
+    background-color: rgb(221, 221, 185);
+}
+header { 
+    background-color: rgb(221, 221, 185);
+   
+}
+
+
+ img{
+    width: 80px;
+    height: 50px;
+
+}
+
+.nav{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    
+}
+
+li:hover{
+    background-color: rgba(69, 66, 66, 0.358);
+
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+
+}
+
+form{
+    display:flex;
+    justify-content:start;
+    align-items:center; 
+    /* margin-left: 60px; */
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+
+label{
+    margin-right: 1rem;
+   
+}
+
+.input-group{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.card img{
+width: 295px;
+height: 200px;
+
+}
