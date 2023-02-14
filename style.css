@@ -16,9 +16,12 @@ header {
 }
 
 
+
+
  img{
-    width: 80px;
-    height: 50px;
+    /* width: 80px;
+    height: 50px; */
+    width: 100%;
 
 }
 
@@ -28,6 +31,8 @@ header {
     align-items: end;
     
 }
+
+
 
 li:hover{
     background-color: rgba(69, 66, 66, 0.358);
@@ -74,3 +79,14 @@ height: 290px;
    
 }
 
+table{
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+td{
+    border: 1px solid black;
+}
