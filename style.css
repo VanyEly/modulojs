@@ -19,9 +19,9 @@ header {
 
 
  img{
-    /* width: 80px;
-    height: 50px; */
-    width: 100%;
+    width: auto;
+    height: auto;
+ 
 
 }
 
@@ -69,8 +69,8 @@ label{
 }
 
 .card img{
-width: 295px;
-height: 290px;
+width: auto;
+height: auto;
 
 }
 #ver{
@@ -89,4 +89,18 @@ th {
 
 td{
     border: 1px solid black;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+header ul{
+    flex-direction: column;
+    align-items: stretch;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    header img {
+     height: 50px;
+     width: 50px;
+    }
 }
