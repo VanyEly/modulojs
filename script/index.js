@@ -17,10 +17,10 @@ for (const evento of data.events){
       </div>
       <div class="card-footer">
           <small class="text-muted">Precio $${evento.price}</small>
-           <a href="./vermas.html">
+           
             <button onclick="seeDetails('${evento._id}')" class="btn btn-secondary m-4" type="button">
                  ver más
-            </button></a>
+            </button>
          </div>
     </div>
       `
@@ -29,9 +29,10 @@ return cards;
 }
 
 function seeDetails(id){
+  console.log(id);
   window.location.href= `./vermas.html?id=${id}`;
 }
-contenedorCards.innerHTML = cards
+
 
  
 
