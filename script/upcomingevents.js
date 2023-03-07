@@ -39,3 +39,33 @@ function cards(arrData){
     }
     return cards;
 }
+
+// //axxxxx
+// function getCategory(arrData){
+//     let allCategories = [];
+//     arrData.forEach((element) => {
+//       if (allCategories.indexOf(element.category) < 0) {
+//         allCategories.push(element.category);
+//       }
+//     });
+//     return allCategories.sort();
+// }
+
+// function showCategories(arrData) {
+//   let categories = "";
+//   arrData.map((category) => (categories += `<div class="form-check form-check-inline">
+//     <input class="form-check-input" type="checkbox" id="${category}" value="${category}">
+//     <label class="form-check-label" for="${category}">${category}</label></div>`)
+//   );
+//   return categories;
+// }
+
+// const upcomingEvents = data.events.filter(event => upcomingDate(data,event.date));
+
+// document.title='Upcoming Events';
+
+// let upcomingCards = document.getElementById('upcoming-card');
+// upcomingCards.innerHTML = upCards(upcomingEvents);
+
+// let homeCategories = document.getElementById("category");
+// homeCategories.innerHTML = showCategories(getCategory(data.events));

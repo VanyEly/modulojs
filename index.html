@@ -71,31 +71,47 @@
         </nav>
       </div>
 
-      <div class="row d-flex justify-content-start input-group p-1">
+      <div  id="checkbox-father" class="row d-flex justify-content-start input-group p-1">
         <form
-          class="col-6 d-flex justify-content-center"
+          class="col-6 d-flex justify-content-center" id = "checkbox"
           action=""
           method="get"
         >
         <input class="form-check-input" type="checkbox" id="category1" value="category1" checked>
-        <label class="form-check-label" for="category1">Category</label>
+         <label class="form-check-label m-1 mx-2" for="category1">Food Fair</label>
+
         <input class="form-check-input" type="checkbox" id="category1" value="category1" checked>
-        <label class="form-check-label" for="category1">Category</label> <input class="form-check-input" type="checkbox" id="category1" value="category1" checked>
-        <label class="form-check-label" for="category1">Category</label> <input class="form-check-input" type="checkbox" id="category1" value="category1" checked>
-        <label class="form-check-label" for="category1">Category</label>
+        <label class="form-check-label m-1 mx-2" for="category1"> Museum</label>
+
+         <input class="form-check-input" type="checkbox" id="category1" value="category1" checked>
+         <label class="form-check-label m-1 mx-2" for="category1"> Costume Party </label> 
+
+        <input class="form-check-input" type="checkbox" id="category1" value="category1" checked>
+        <label class="form-check-label m-1 mx-2" for="category1"> Music Concert </label>
+
+        <input class="form-check-input" type="checkbox" id="category1" value="category1" checked>
+         <label class="form-check-label  m-1 mx-2" for="category1"> Book Exchange </label> 
+
+        <input class="form-check-input" type="checkbox" id="category1" value="category1" checked>
+        <label class="form-check-label  m-1 mx-2" for="category1"> Race</label>
+
+        <input class="form-check-input" type="checkbox" id="category1" value="category1" checked>
+       <label class="form-check-label  m-1 mx-2" for="category1"> Cinema</label>
+
         </form>
 
-        <div class="row col-6 p-0">
-          <div class="col-11 p-0">
-            <input type="text" class="form-control" />
+        <div  class="row col-6 p-0">
+          <div  id="busqueda" class="col-11 p-0">
+            <input id="formulario" type="text"   id="input-texto"  class="form-control" />
           </div>
-          <div
+          <div id="botonbuscador"
             class="col-1 p-0 material-symbols-outlined input-group-text d-flex"
             id="btnGroupAddon"
           >
             search
           </div>
         </div>
+        <div id="resultados-busqueda"></div>
       </div>
 
       <div class="card-group">

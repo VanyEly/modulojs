@@ -35,3 +35,38 @@ function cards(arrData){
     }
     return cards;
 }
+
+
+//axxx
+function getCategory(arrData){
+    let allCategories = [];
+    arrData.forEach((element) => {
+      if (allCategories.indexOf(element.category) < 0) {
+          allCategories.push(element.category);
+      }
+    });
+    return allCategories.sort();
+}
+
+// function showCategories(arrData) {
+//     let categories = "";
+//     arrData.map((category) => (categories += `<form
+//     class="col-6 d-flex flex-wrap justify-content-center"
+//     action=""
+//     method="get"
+//   >
+//   <input class="form-check-input" type="checkbox" id="${category}" value="${category}" checked>
+//   <label class="form-check-label m-1 mx-2" for="${category}">${category}</label>`)
+//     );
+//     return categories;
+// }
+
+// const pastsEvents = data.events.filter(event => pastDate(data,event.date));
+
+
+
+// let pastCards = document.getElementById('conteinerCards');
+// pastCards.innerHTML = pastCards(pastEvents);
+
+// let homeCategories = document.getElementById("checkbox-father");
+// homeCategories.innerHTML = showCategories(getCategory(data.events));
