@@ -40,32 +40,60 @@ function cards(arrData){
     return cards;
 }
 
-// //axxxxx
-// function getCategory(arrData){
-//     let allCategories = [];
-//     arrData.forEach((element) => {
-//       if (allCategories.indexOf(element.category) < 0) {
-//         allCategories.push(element.category);
-//       }
-//     });
-//     return allCategories.sort();
-// }
+let contenedorCards = document.querySelector('#tarjeta');
+contenedorCards.innerHTML= index(data.events);
 
-// function showCategories(arrData) {
-//   let categories = "";
-//   arrData.map((category) => (categories += `<div class="form-check form-check-inline">
-//     <input class="form-check-input" type="checkbox" id="${category}" value="${category}">
-//     <label class="form-check-label" for="${category}">${category}</label></div>`)
-//   );
-//   return categories;
-// }
+function index(arrayData) {
+let cards = '';
 
-// const upcomingEvents = data.events.filter(event => upcomingDate(data,event.date));
+for (const evento of arrayData){
+    cards +=  ` 
+   
+    <div class="card m-1 p-2 card-i">
+     
+      <img src="${evento.image}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">${evento.name}</h5>
+        <p class="card-text">${evento.description}</p>
+      </div>
+      <div class="card-footer">
+          <small class="text-muted">Precio $${evento.price}</small>
+           
+            <button onclick="seeDetails('${evento._id}')" class="btn btn-secondary m-4" type="button">
+                 ver más
+            </button>
+         </div>
+    </div>
+      `
+}
+return cards;
+}
 
-// document.title='Upcoming Events';
+function seeDetails(id){
+  // console.log(id);
+  window.location.href= `./vermas.html?id=${id}`;
+}
 
-// let upcomingCards = document.getElementById('upcoming-card');
-// upcomingCards.innerHTML = upCards(upcomingEvents);
 
-// let homeCategories = document.getElementById("category");
-// homeCategories.innerHTML = showCategories(getCategory(data.events));
+ 
+
+let formulario = document.getElementById('formulario');
+
+// console.log(formulario);
+
+formulario.addEventListener('input',() => {
+
+
+  searchedInfo = formulario.value.toLowerCase();
+  // console.log(searchedInfo);
+  let filteredCards = data.events.filter((eventName) =>
+   eventName.name.toLowerCase().includes(searchedInfo)|| 
+  eventName.description.toLowerCase().includes(searchedInfo))
+  console.log(filteredCards);
+
+  let newCards = index(filteredCards);
+
+  contenedorCards.innerHTML = newCards
+
+});
+

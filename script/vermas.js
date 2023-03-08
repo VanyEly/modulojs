@@ -7,7 +7,7 @@ const container = document.getElementById("details");
 let cards = "";
 
   cards = `
-    <div class="card m-1 p-2 card-i">
+    <div class="card m-5 p-2 card-i d-flex justify-content-center">
    
     <img src="${evento[0].image}" class="card-img-top" alt="...">
     <div class="card-body">
