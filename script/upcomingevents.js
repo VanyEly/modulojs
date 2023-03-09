@@ -97,3 +97,23 @@ formulario.addEventListener('input',() => {
 
 });
 
+///
+let check = document.querySelectorAll('input[type=checkbox]')
+check.forEach(input => {
+    input.addEventListener('change', (e)=>{
+      if (e.target.checked) {
+        let categoriaSeleccionada = e.target.value;
+        let eventosFiltrados = data.events.filter(dt => {
+            if (dt.category == categoriaSeleccionada) {
+                console.log(dt.category)
+                return true;
+            }
+        })
+        for(let vnts of eventosFiltrados){
+          // console.log(eventosFiltrados);
+           contenedorCards.innerHTML += indexCategorias
+        }
+    }
+})
+})
+
