@@ -1,4 +1,3 @@
-
 let contenedorCards = document.querySelector('#tarjeta');
 // console.log(tarjeta);
 contenedorCards.innerHTML= index(data.events);
@@ -92,6 +91,8 @@ check.forEach(input => {
     }
 })
 })
+
+
 
 
 
