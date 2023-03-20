@@ -56,7 +56,7 @@ formulario.addEventListener('input',() => {
 
 });
 
-//
+
 let listadoCategorias = []
 for(let event of data.events){
     if (!listadoCategorias.includes(event.category)){
@@ -70,7 +70,7 @@ for (let categoria of listadoCategorias){
 }
 document.querySelector("#checkbox").innerHTML= indexCategorias
 
-//
+
 
 
 let check = document.querySelectorAll('input[type=checkbox]')
@@ -85,14 +85,12 @@ check.forEach(input => {
             }
         })
         for(let vnts of eventosFiltrados){
-          // console.log(eventosFiltrados);
+          console.log(eventosFiltrados);
            contenedorCards.innerHTML += indexCategorias
         }
     }
 })
 })
-
-
 
 
 

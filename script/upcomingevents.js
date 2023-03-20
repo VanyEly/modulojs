@@ -72,22 +72,17 @@ formulario.addEventListener('input',() => {
 });
 
 ///
-let check = document.querySelectorAll('input[type=checkbox]')
-check.forEach(input => {
-    input.addEventListener('change', (e)=>{
-      if (e.target.checked) {
-        let categoriaSeleccionada = e.target.value;
-        let eventosFiltrados = data.events.filter(dt => {
-            if (dt.category == categoriaSeleccionada) {
-                console.log(dt.category)
-                return true;
-            }
-        })
-        for(let vnts of eventosFiltrados){
-          // console.log(eventosFiltrados);
-           contenedorCards.innerHTML += indexCategorias
-        }
+let listadoCategorias = []
+for(let event of data.events){
+    if (!listadoCategorias.includes(event.category)){
+        listadoCategorias.push(event.category)
     }
-})
-})
+}
+let indexCategorias = ""
+for (let categoria of listadoCategorias){
+    indexCategorias += `<input class="form-check-input" type="checkbox" id="input-${categoria}" value="${categoria}" checked>
+    <label class="form-check-label m-1 mx-2" for="input-${categoria}">${categoria}</label>`
+}
+document.querySelector("#checkbox").innerHTML= indexCategorias
+
 
