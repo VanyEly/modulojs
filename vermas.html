@@ -51,11 +51,11 @@
     <main id="details">
        <section id="carta-detallada">
         
-        <div class="card detail-card" style="width: 18rem;">
-          <div class="col-md-4 ppadre">
-            <img v-bind:src="idcard.image" class="img-fluid" :alt="idcard.name">
+        <div class="card detail-card col-5  m-4 bg-dark-subtle">
+          <div class="ppadre col-3">
+            <img v-bind:src="idcard.image" class="img-fluid m-5 p-2 " :alt="idcard.name">
         </div>
-        <div class="col-md-8 card-text col-12 ">
+        <div class="col-6 card-text">
             <div class="card-body card-foot card-cuerpo">
                 <h5 class="card-title"> {{idcard.name}}</h5>
                 <p class="card-text">Date: {{idcard.date}}</p>
@@ -65,7 +65,7 @@
                 <p class="card-text">Capacity: {{idcard.capacity}}</p>
                 <p class="card-text" v-if="idcard.estimate">Estimate: {{idcard.estimate}}</p>
                 <p class="card-text" v-if="idcard.assistance">Assistance: {{idcard.assistance}}</p>
-                <p class="card-text">Price: {{idcard.price}}$</p>
+                <p class="card-text">Price:${{idcard.price}}</p>
             </div>
         </div>
         
