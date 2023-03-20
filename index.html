@@ -24,6 +24,7 @@
   </head>
 
   <body>
+      <div id="app">
     <header>
       <div class="row container col-12">
         <img
@@ -70,14 +71,34 @@
           >
         </nav>
       </div>
-
-      <div  id="checkbox-father" class="row d-flex justify-content-start input-group p-1">
+       <!-- desde aca -->
+          <article class="check-nav">
+      <div class="btn-group gap-2 justify-content-center w-100" id="checkboxs" role="group" data-bs-toggle="buttons">
+        <label class="checkbox" v-for="recorro of checkboxes" v-if="checkboxes">
+            <input type="checkbox" class="me-2"  v-model="checked" :value="recorro" name="" id="" autocomplete="off" v-on:change="filtroCruzado"> {{recorro}}
+        </label>
+    </div>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search1" v-model="valueBuscador" v-on:keyup="filtroCruzado">
+            </form>
+          </article>
+    <section id="contenedor-cartas">
+      <div v-if="cardAmazingEvents" v-for="recorro of cardsFiltradas" class="card" style="width: 18rem;">
+        <img v-bind:src="recorro.image" class="card-img-top" v-bind:alt="recorro.name">
+        <div class="card-body">
+          <h5 class="card-title">{{recorro.name}}</h5>
+          <p class="card-text">{{recorro.description}}</p>
+          <a :href='"./vermas.html?idUrl="+recorro._id' class=" btn btn-primary">ver más</a>
+        </div>
+      </div>
+    </section>
+      <!-- <div  id="checkbox-father" class="row d-flex justify-content-start input-group p-1">
         <form
           class="col-6 d-flex justify-content-center" id = "checkbox"
           action=""
           method="get"
         >
-        <!-- <input class="form-check-input" type="checkbox" id="category1" value="category1" checked>
+        <input class="form-check-input" type="checkbox" id="category1" value="category1" checked>
          <label class="form-check-label m-1 mx-2" for="category1">Food Fair</label>
 
         <input class="form-check-input" type="checkbox" id="category2" value="category1" checked>
@@ -96,7 +117,7 @@
         <label class="form-check-label  m-1 mx-2" for="category1"> Race</label>
 
         <input class="form-check-input" type="checkbox" id="category7" value="category1" checked>
-       <label class="form-check-label  m-1 mx-2" for="category1"> Cinema</label> -->
+       <label class="form-check-label  m-1 mx-2" for="category1"> Cinema</label>
 
         </form>
 
@@ -120,7 +141,7 @@
       </div>
       <ul id="lista">
 
-      </ul>
+      </ul> -->
     </main>
 
     <footer>
@@ -169,13 +190,14 @@
         <p class="d-flex justify-content-end fs-6 fw-semibold">Cohort</p>
       </div>
     </footer>
-
+   </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <script src="./script/data.js"></script>
+    <!-- <script src="./script/data.js"></script> -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./script/index.js"></script>
     
   </body>
