@@ -24,11 +24,11 @@ function cards(arrData){
          <p class="card-text">${evento.description}</p>
        </div>
        <div class="card-footer">
-           <small class="text-muted">Precio $${evento.price}</small>
-            <a href="./vermas.html">
-             <button class="btn btn-secondary m-4" type="button">
-                  ver más
-             </button></a>
+       <small class="text-muted">Precio $${evento.price}</small>
+           
+       <button onclick="seeDetails('${evento._id}')" class="btn btn-secondary m-4" type="button">
+            ver más
+       </button>
           </div>
      </div>
        `
@@ -61,7 +61,7 @@ let filteredCards = data.events.filter((eventName) =>
 eventName.description.toLowerCase().includes(searchedInfo))
 console.log(filteredCards);
 
-let newCards = index(filteredCards);
+let newCards = cards(filteredCards);
 
 contenedorCards.innerHTML = newCards
 

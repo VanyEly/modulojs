@@ -10,7 +10,8 @@ createApp({
       }  
     },
     created(){
-        fetch("https://mindhub-xj03.onrender.com/api/amazing")
+        // fetch ('./dat.json')
+        fetch('https://mindhub-xj03.onrender.com/api/amazing')
             .then( response => response.json())
             .then(info => {
                 this.data = info

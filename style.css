@@ -130,3 +130,9 @@ header ul{
         border: none;
     }
 }
+
+#details-container{
+    width: 700px;
+    height: 500px;
+    margin: 2rem;
+}
