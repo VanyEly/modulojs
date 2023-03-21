@@ -71,7 +71,7 @@ label{
     align-items: end;
 }
 
-.card img{
+#imagencard{
 width: auto;
 height: auto;
 }
@@ -129,4 +129,32 @@ header ul{
         color: white;
         border: none;
     }
+}
+
+#details-container{
+    width: 700px;
+    height: 500px;
+    margin: 2rem;
+}
+
+.img-fluid{
+   max-width: 400px;
+    height: 300px;
+    margin: 2rem;
+  
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px){
+    .img-fluid {
+        width: 250px;
+        height: 250px;
+      
+   }
+}
+
+#carta-detallada{
+
+    display: flex;
+    justify-content: center;
+
 }
