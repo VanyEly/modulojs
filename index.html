@@ -71,7 +71,7 @@
           >
         </nav>
       </div>
-       <!-- desde aca -->
+     
           <article class="check-nav">
       <div class="btn-group gap-2 justify-content-center w-100" id="checkboxs" role="group" data-bs-toggle="buttons">
         <label class="checkbox" v-for="recorro of checkboxes" v-if="checkboxes">
@@ -90,7 +90,7 @@
           </article>
     <section id="contenedor-cartas" class="row d-flex justify-content-center m-1 ">
       <div v-if="cardAmazingEvents" v-for="recorro of cardsFiltradas" class="card m-2 bg-dark-subtle" style="width: 18rem;">
-        <img v-bind:src="recorro.image" id="imagencard" class="card-img-top p-1" v-bind:alt="recorro.name">
+        <img v-bind:src="recorro.image" id="imagencard" class="card-img" v-bind:alt="recorro.name">
         <div class="card-body">
           <h5 class="card-title">{{recorro.name}}</h5>
           <p class="card-text">{{recorro.description}}</p>
@@ -101,13 +101,7 @@
     </section>
      
 
-      <!-- <div class="card-group">
-        <div class="row d-flex justify-content-center m-3" id="tarjeta">
-        </div>
-      </div>
-      <ul id="lista">
-
-      </ul> -->
+     
     </main>
 
     <footer>
@@ -162,7 +156,7 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="./script/data.js"></script> -->
+  
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./script/index.js"></script>
     
