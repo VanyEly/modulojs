@@ -90,7 +90,7 @@
           </article>
     <section id="contenedor-cartas" class="row d-flex justify-content-center m-1 ">
       <div v-if="cardAmazingEvents" v-for="recorro of cardsFiltradas" class="card m-2 bg-dark-subtle" style="width: 18rem;">
-        <img v-bind:src="recorro.image" id="imagencard" class="card-img" v-bind:alt="recorro.name">
+        <img v-bind:src="recorro.image" id="imagencard" class="card-img p-1" v-bind:alt="recorro.name">
         <div class="card-body">
           <h5 class="card-title">{{recorro.name}}</h5>
           <p class="card-text">{{recorro.description}}</p>

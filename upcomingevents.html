@@ -81,7 +81,7 @@
                   </div>
               </div>
               <form  class="search m-2 d-flex flex-row flex-nowrap col-9 m-2 p-4 " role="search">
-                <input v-model="keyWordSearch" @keyup="filtroCruzado" class="form-control m-1 mx-3 col-7 d-flex" type="search" placeholder="Search an Event" aria-label="Search"> 
+                <input v-model="keyWordSearch" @keyup="filtroCruzado" class="form-control m-1 mx-3 col-7 d-flex" type="search" placeholder="Search" aria-label="Search"> 
                 <div id="botonbuscador"
                 class="col-2  material-symbols-outlined input-group-text d-flex"
                 id="btnGroupAddon"
@@ -97,7 +97,7 @@
         <div v-if="arrayEvents.length > 0">
           <div id="cards-section" class="row d-flex justify-content-center m-1" >
             <div class="card m-2 bg-dark-subtle" v-for = "event of upcomingEvents" style="width: 18rem;">
-             <img id="cardImg":src="event.image" class="card-img" :alt="event.name">
+             <img id="cardImg":src="event.image" class="card-img p-1" :alt="event.name">
                <div class="card-body">
                 <h5 class="card-title width">{{event.name}}</h5>
                 <p class="card-text">{{event.description}}</p>
